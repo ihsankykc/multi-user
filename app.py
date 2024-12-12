@@ -43,6 +43,9 @@ with app.app_context():
 def load_user(user_id):
     return User.query.get(int(user_id))
 
+@app.route('/')
+def promt():
+    return render_template('promt.html')
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
@@ -150,5 +153,15 @@ def add_event():
     db.session.commit()
 
     return redirect(url_for('calendar_page', year=year, month=month))
+
+@app.route('/tenants')
+@login_required
+def tenants_page():
+    return render_template('tenants.html')
+
+@app.route('/services')
+@login_required
+def services_page():
+    return render_template('services.html')
 
 app.run(host='0.0.0.0', port=5000, debug=True)
