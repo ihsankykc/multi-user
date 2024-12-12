@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link href="{{ url_for('static', filename='main.css') }}" type="text/css" rel="stylesheet">
+    
+</head>
+<body>
+
+    
+    <div class="wrapper">
+
+    
+        <header class="header-content">
+            <button class="Logout"><a href="/">Log out</a></button>
+            <h2>Hello!</h2>
+            <h1>Welcome to the Project Room Services  Page</h1>
+        </header>
+
+        <ul>
+            <li><a href="/hello">Home</a></li>
+            <li><a href="/tenants">Tenants</a></li>
+            <li><a href="/services">Services</a></li>
+        </ul>
+    </div>
+
+    
+</body>

@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link href="{{ url_for('static', filename='main.css') }}" type="text/css" rel="stylesheet">
+    
+</head>
+<body>
+
+    
+    <div class="wrapper">
+
+    
+        <header class="header-content">
+            <button class="Logout"><a href="/">Log out</a></button>
+            <h2>Hello!</h2>
+            <h1>Welcome to the Project Room Temperature Tenants Page</h1>
+        </header>
+
+        <ul>
+            <li><a href="/hello">Home</a></li>
+            <li><a href="/tenants">Tenants</a></li>
+            <li><a href="/services">Services</a></li>
+        </ul>
+    </div>
+
+    <section class="team">
+        <h1>Meet Our Team</h1>
+        <div class="team-container">
+            <div class="team-member">
+                <img src="member1.jpg" alt="Member 1">
+                <h2>Ihsan KAYIKCI</h2>
+                <p>Role: Team Leader</p>
+            </div>
+            <div class="team-member">
+                <img src="member2.jpg" alt="Member 2">
+                <h2>Alexander IVANOV</h2>
+                <p>Role: Designer/Marketing</p>
+            </div>
+            <div class="team-member">
+                <img src="member3.jpg" alt="Member 3">
+                <h2>Miroslav GEORGIEV</h2>
+                <p>Role: Server Manager</p>
+            </div>
+            <div class="team-member">
+                <img src="member4.jpg" alt="Member 4">
+                <h2>Bryan WUIJTS</h2>
+                <p>Role: Security Expert</p>
+            </div>
+        </div>
+    </section>
+    
+</body>
