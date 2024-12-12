@@ -57,19 +57,17 @@
                                 </ul>
                             {% endif %}
 
-                              <!-- Display events for the day -->
-<!--                    {% if events.get(day|string) %}
-                    <ul>
-                        {% for event in events[day|string] %}
-                        <li>{{ event }}</li>
-                        {% endfor %}
-                    </ul>
-                    {% endif %} -->
+                            <form action="{{ url_for('clear_events') }}" method="POST">
+                                <input type="hidden" name="year" value="{{ year }}">
+                                <input type="hidden" name="month" value="{{ month }}">
+                                <input type="hidden" name="day" value="{{ "%02d"|format(day) }}">
+                                <button type="submit" class="clear-button">Clear</button>
+                            </form>
                     
                             <form action="{{ url_for('add_event') }}" method="POST">
                                 <input type="hidden" name="year" value="{{ year }}">
                                 <input type="hidden" name="month" value="{{ month }}">
-                                <input type="hidden" name="day" value="{{ day }}">
+                                <input type="hidden" name="day" value="{{ "%02d"|format(day) }}">
                                 <input type="text" name="event" placeholder="Add event">
                                 <button type="submit">Add</button>
                             </form>

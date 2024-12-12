@@ -117,6 +117,22 @@ def calendar_page():
 
     return render_template('calendar.html', year=year, month=month, month_days=month_days, events=events)
 
+@app.route('/clear_events', methods=['POST'])
+@login_required
+def clear_events():
+    year = request.form['year']
+    month = request.form['month']
+    day = request.form['day']
+    
+    # Construct the date with zero-padded month and day
+    date = f"{year}-{int(month):02d}-{int(day):02d}"
+    
+    # Delete events for the specific date and current user
+    Event.query.filter_by(user_id=current_user.id, date=date).delete()
+    db.session.commit()
+    
+    return redirect(url_for('calendar_page', year=year, month=month))
+
 
 
 @app.route('/add_event', methods=['POST'])
