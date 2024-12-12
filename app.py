@@ -61,7 +61,7 @@ def register():
         return redirect(url_for('login'))
     return render_template('register.html')
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
         username = request.form['username']
@@ -110,7 +110,7 @@ def calendar_page():
     # Convert events into a dictionary keyed by day
     events = {}
     for event in user_events:
-        day = event.date.split('-')[-1]  # Extract the day part
+        day = int(event.date.split('-')[-1])  # Extract the day part
         if day not in events:
             events[day] = []
         events[day].append(event.event_text)

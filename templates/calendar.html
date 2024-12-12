@@ -58,13 +58,13 @@
                             {% endif %}
 
                               <!-- Display events for the day -->
-                    {% if events.get(day|string) %}
+<!--                    {% if events.get(day|string) %}
                     <ul>
                         {% for event in events[day|string] %}
                         <li>{{ event }}</li>
                         {% endfor %}
                     </ul>
-                    {% endif %}
+                    {% endif %} -->
                     
                             <form action="{{ url_for('add_event') }}" method="POST">
                                 <input type="hidden" name="year" value="{{ year }}">
