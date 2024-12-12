@@ -1,0 +1,174 @@
+*{
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+
+}
+
+ul{
+    list-style: none;
+    margin: 0 ;
+    padding: 0;
+}
+
+
+
+.wrapper{
+    
+    height: 17em;
+    background-image: url('../static/gradient-emerald-background.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: cornsilk;
+   
+    ul{
+        display: flex;
+        justify-content: center;
+        margin-top: 2em;
+    }
+    
+    ul li a {
+        padding: 1em;
+        color: white;
+        text-decoration: none;
+    }
+
+    
+}
+
+.logout{
+    text-decoration: none;
+    background: #F4C3C2;
+    position: absolute;
+    right: 5em;
+    top: 6em;
+    border-radius: 5px;
+    padding: 0.5em auto;
+    
+}
+
+
+.header-content h2 {
+    text-align: left;
+    margin-bottom: 1em;
+    margin-left: 2em;
+}
+
+.header-content h1 {
+    margin-left: 4em;
+}
+
+.team {
+    padding: 20px;
+    background-color: #f4f4f9;
+}
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.team-member {
+    flex: 1 1 calc(25% - 20px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    background-color: #fff;
+    padding: 15px;
+    max-width: 250px;
+    transition: transform 0.3s ease;
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+}
+
+.team-member h2 {
+    font-size: 1.2rem;
+    margin: 10px 0 5px;
+}
+
+.team-member p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.calendar_events table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.calendar_events th, .calendar_events td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #090303;
+}
+
+.calendar_events th {
+    background-color: #b91b1b;
+}
+
+.calendar_events td {
+    vertical-align: top;
+}
+
+.calendar_events form {
+    margin-top: 5px;
+}
+.calendar_events td {
+    vertical-align: top;
+    padding: 10px;
+}
+
+.calendar_events input[type="text"] {
+    width: 80%;
+    margin-bottom: 5px;
+    padding: 5px;
+    font-size: 0.9em;
+}
+
+.calendar_events button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 0.9em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.calendar_events button:hover {
+    background-color: #0056b3;
+}
+
+.calendar_events form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.calendar_navigation {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.calendar_navigation a {
+    text-decoration: none;
+    color: #007BFF;
+    margin: 0 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.calendar_navigation a:hover {
+    color: #0056b3;
+}
